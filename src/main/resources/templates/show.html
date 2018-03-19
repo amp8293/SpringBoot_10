@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a href="/">Show All Courses</a><br />
+<!--<p th:inline="text">-->
+    <!--Title: [[${course.title}]] <br />-->
+    <!--Instructor: [[${course.instructor}]] <br />-->
+<!--</p>-->
+Title: <span th:text="${course.title}"></span> <br />
+Instructor: <span th:text="${course.instructor}"></span> <br />
+Description: <p th:text="${course.description}"></p>
+Credits: <span th:text="${course.credit}"></span> <br />
+<a href="@{/delete/{id}(id=${course.id})}">Delete This Course</a><br />
+</body>
+</html>
